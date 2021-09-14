@@ -1,6 +1,11 @@
 import os
 from pathlib import Path
 
+from flask import request
+from werkzeug.utils import secure_filename
+
+from run import app
+
 
 class FileUtil:
     @classmethod
@@ -23,9 +28,12 @@ class FileUtil:
         if not os.path.exists(project_path):
             os.mkdir(project_path)
 
-
-
-
+    @classmethod
+    def api_upload(cls):
+        if request.method == 'POST':
+            f = request.files['file']
+            f.save(os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(f.filename)))
+            return 'file uploaded successfully'
 
 if __name__ == '__main__':
-    FileUtil.create_content('admin', '/api')
+    FileUtil.api_upload()
