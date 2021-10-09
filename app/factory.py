@@ -5,7 +5,6 @@ import platform
 import yaml
 import os
 from flask import Flask, Blueprint
-
 from app.utils.core import JSONEncoder, db, scheduler
 from app.api.router import router
 

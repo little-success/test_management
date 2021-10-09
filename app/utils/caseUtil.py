@@ -1,23 +1,7 @@
 import os
 import re
-import sys
-
 from requests import Session
 
-# template ="""
-# args:
-#   - {method}
-#   - {api}
-# kwargs:
-#   -
-#     caseName: {caseName}
-#     {data_or_params}:
-#         {data}
-# validator:
-#   -
-#     json:
-#       successed: True
-# """
 
 template = """
 {caseName}:

@@ -1,9 +1,7 @@
 import os
 from pathlib import Path
-
 from flask import request
 from werkzeug.utils import secure_filename
-
 from run import app
 
 

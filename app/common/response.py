@@ -1,5 +1,4 @@
 from flask import request, current_app
-
 from app.utils.code import ResponseCode
 
 

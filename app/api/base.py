@@ -4,11 +4,9 @@
 import logging
 from flask import current_app, request
 from sqlalchemy import inspect
-
 from app.utils.code import ResponseCode
 from app.utils.core import db
 from flask.views import MethodView
-
 from app.common.response import ResMsg
 from app.utils.util import view_route
 

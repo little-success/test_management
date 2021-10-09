@@ -1,10 +1,8 @@
 import os
-import bp as bp
 from flask import request, jsonify, Blueprint
 from werkzeug.utils import secure_filename
 from app.common.response import ResMsg
 from app.utils.code import ResponseCode
-from app.utils.util import route
 
 bp = Blueprint("test", __name__, url_prefix='/')
 
